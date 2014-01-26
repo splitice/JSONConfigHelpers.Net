@@ -1,4 +1,6 @@
 JSONConfigHelpers.Net
 =====================
 
-Helper Classes for building JSON configuration files.
+Helper Classes for reading JSON configuration files with JSON.Net
+
+

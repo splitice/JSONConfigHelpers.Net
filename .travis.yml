@@ -1,0 +1,10 @@
+language: c
+ 
+install:
+  - sudo apt-get -qq install mono-devel mono-gmcs nunit-console
+ 
+script:
+  - export EnableNuGetPackageRestore=true
+  - mozroots --import --sync
+  - xbuild CI.proj
+  - nunit-console ./JSONConfigurationHelpers.Test/bin/Debug/JSONConfigurationHelpers.Test.dll -exclude Integration,NotWorkingOnMono
