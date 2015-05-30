@@ -12,7 +12,7 @@ script:
   - export EnableNuGetPackageRestore=true
   - mozroots --import --sync
   - bash travis-ci/autoversion.sh JSONConfigHelpers
-  - bash travis-ci/autoversion.sh JSONConfigHelpers.Test
+  - bash travis-ci/autoversion.sh JSONConfigurationHelpers.Test
   - xbuild CI.proj
   - nunit-console ./JSONConfigurationHelpers.Test/bin/Debug/JSONConfigurationHelpers.Test.dll -exclude Integration,NotWorkingOnMono
   - travis_retry bash travis-ci/nuget-upload.sh JSONConfigHelpers
