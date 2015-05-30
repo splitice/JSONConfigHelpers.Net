@@ -14,3 +14,4 @@ script:
   - bash travis-ci/autoversion.sh JSONConfigHelpers
   - xbuild CI.proj
   - nunit-console ./JSONConfigurationHelpers.Test/bin/Debug/JSONConfigurationHelpers.Test.dll -exclude Integration,NotWorkingOnMono
+  - travis_retry bash travis-ci/nuget-upload.sh JSONConfigHelpers
